@@ -44,4 +44,4 @@ Ce programme a été uniquement testé sur linux et windows.
 Ce programme comporte peux etre des erreurs ou des bugs, sivous en voyez n'hesitez pas a le signaler.
 
 
-# Lisence
+# Licence 
