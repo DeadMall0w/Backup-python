@@ -41,7 +41,7 @@ Il faut modifier les variables :
 # Limitation
 Par souci d'optimisation, pour regarder si un fichier a été modifié, il regarde la date de la derniere modification. Ce qui peut causer des problemes si les fichiers dans le dossier de back-up ont été modifié apres ceux présent dans le dossier source.
 Ce programme a été uniquement testé sur linux et windows.
-Ce programme comporte peux etre des erreurs ou des bugs, sivous en voyez n'hesitez pas a le signaler.
+Ce programme comporte peux etre des erreurs ou des bugs, si vous en voyez n'hesitez pas a le signaler.
 
 
 # Licence 
