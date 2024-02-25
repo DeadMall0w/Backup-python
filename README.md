@@ -1,33 +1,30 @@
-# Projet
-Voici, mon projet personnel qui a pour but de faire des backups tres simplements et rapidement en python.
+# Project
+Here is my personal project aimed at making backups very simply and quickly in Python.
 
-# Comment ca fonctionne 
-Ce projet utilise des fichiers txt pour sauvegarder des profiles
-Voici l'exemple d'un profile. Un profile a pour but d'avoir toutes les données necessaire pour le fonctionnement du programme. Le programme peut fonctionner sans charger de profile, il suffira juste de changer les variables correspondantes dans le script python.
+# How it works
+This project uses txt files to save profiles. Here is an example of a profile. A profile aims to have all the necessary data for the program to function. The program can work without loading a profile, it will just be necessary to change the corresponding variables in the Python script.
 
-Exemple de fichier config :
+Example of config file:
 > C:/Users/USER_NAME/Documents/to backup
 > D:/Users/USER_NAME/Documents/back-up folder
 > C:/Users/USER_NAME/Documents/logs
 > 1
 > 0
 
-La premiere ligne indique le dossier source qui va etre sauvegardé, le second l'emplacement de la sauvegarde et la troisieme la ou sont enregitrer les logs du programme s'il y en a.
-La quatrieme ligne indique s'il y a des logs qui sont fait (0 = false, 1 = True)
-Et la derniere indique si le programme doit supprimer les fichiers qui sont présent dans le dossier de sauvegarde mais pas présent dans le dossier source.
+The first line indicates the source folder that will be backed up, the second one indicates the backup location, and the third one indicates where the program logs are saved if there are any. The fourth line indicates whether logs are being made (0 = false, 1 = true), and the last one indicates if the program should delete files that are present in the backup folder but not in the source folder.
 
 
-# Comment l'utiliser 
-## Sans fichier config
-Il faut avoir python d'insallé sur la machine.
-Il faut modifier les variables :
-- src_dir : represant le fichier source qui va être sauvegardé.
-- sync_dir : l'emplacement de sauvegarde des fichiers.
-- logs_dir : l'emplacement ou sont sauvegardé les logs dans le cas où il y en a.
-- log : (True ou False) définit le progamme creer des logs.
-- delete_file : (True ou False) définit si le programme a droit de supprimer des fichiers dans le cas où ils ne sont pas présent dans le fichier source
+# How to use it
+## Without a config file
+You need to have Python installed on the machine.
+You need to modify the variables:
+- src_dir: represents the source file to be backed up.
+- sync_dir: the location to backup files.
+- logs_dir: the location where logs are saved in case there are any.
+- log: (True or False) defines whether the program creates logs.
+- delete_file: (True or False) defines if the program has the right to delete files if they are not present in the source file.ce
 
-## Avec un fichier conig
+## With a config fileg
 1) Avoir python d'installé sur la machine.
 2) Creer un fichier texte portant le nom de la config que vous voulez : ex "config1.txt"
 3) Modifier le fichier config :
