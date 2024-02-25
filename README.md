@@ -34,7 +34,7 @@ Il faut modifier les variables :
 
 
 4) Pour executer ce programme avec le fichier config, ouvrez le terminale windows, ou linux.
-5) executer le programme avec comme un argument le nom de la config ex : "python main.py config1"
+5) Executer le programme avec comme un argument le nom de la config ex : "python main.py config1"
 
 
 
@@ -45,3 +45,4 @@ Ce programme comporte peux etre des erreurs ou des bugs, si vous en voyez n'hesi
 
 
 # Licence 
+Vous êtes libre d'utiliser ou modifier le programme comme vous le voulez.
