@@ -25,21 +25,16 @@ You need to modify the variables:
 - delete_file: (True or False) defines if the program has the right to delete files if they are not present in the source file.ce
 
 ## With a config fileg
-1) Avoir python d'installé sur la machine.
-2) Creer un fichier texte portant le nom de la config que vous voulez : ex "config1.txt"
-3) Modifier le fichier config :
-
-
-4) Pour executer ce programme avec le fichier config, ouvrez le terminale windows, ou linux.
-5) Executer le programme avec comme un argument le nom de la config ex : "python main.py config1"
+1) Have Python installed on the machine.
+2) Create a text file named after the config you want: e.g., "config1.txt".
+3) Modify the config file:
+4) To run this program with the config file, open the Windows or Linux terminal.
+5) Execute the program with the name of the config as an argument, e.g., "python main.py config1".
 
 
 
-# Limitation
-Par souci d'optimisation, pour regarder si un fichier a été modifié, il regarde la date de la derniere modification. Ce qui peut causer des problemes si les fichiers dans le dossier de back-up ont été modifié apres ceux présent dans le dossier source.
-Ce programme a été uniquement testé sur linux et windows.
-Ce programme comporte peux etre des erreurs ou des bugs, si vous en voyez n'hesitez pas a le signaler.
+# Limitations
+For optimization purposes, to check if a file has been modified, it checks the date of the last modification. This can cause problems if the files in the backup folder have been modified after those present in the source folder. This program has only been tested on Linux and Windows. This program may contain errors or bugs; if you notice any, please report them.
 
-
-# Licence 
-Vous êtes libre d'utiliser ou modifier le programme comme vous le voulez.
+# License 
+You are free to use or modify the program as you wish.
