@@ -1,0 +1,6 @@
+# line beginning with # are ignored
+# The first not ignored line is the destination folder
+C:\Users\Raphael\MyStorage\Test backup game
+# After line are sources folder
+C:\Users\Raphael\AppData\Roaming\.minecraft\saves
+C:\Users\Raphael\Documents\test
