@@ -1,6 +1,8 @@
-# line beginning with # are ignored
-# The first not ignored line is the destination folder
+# === BACKUP CONFIGURATION FILE ===
+# Lines starting with '#' are ignored
+# The first non-comment line is the DESTINATION folder
+# All following lines are SOURCE folders to back up
+
 C:\Users\Raphael\MyStorage\Test backup game
-# After line are sources folder
-C:\Users\Raphael\AppData\Roaming\.minecraft\saves
-C:\Users\Raphael\Documents\test
+C:\Users\Raphael\Documents\Dash minecraft
+C:\Users\Raphael\Documents\test test

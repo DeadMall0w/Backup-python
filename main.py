@@ -1,55 +1,58 @@
 import sys
 import shutil
 import os
-# total arguments
-if(len(sys.argv) <= 1):
-    print("Please give the location of the settings file !")
+
+if len(sys.argv) <= 1:
+    print("Please provide the location of the settings file!")
     print("Exiting...")
     exit()
 
-syncedFolders = []
+synced_folders = []
 destination = ""
 
-# Arguments passed
+# Read the settings file
 settings_file = sys.argv[1]
-print("Loading file : ", settings_file)
+print("Loading settings from:", settings_file)
 
-f_firstLine = 1
+first_line = True
 try:
-    # Open the file and read its content.
     with open(settings_file) as f:
-        content = f.readlines()
+        for raw_line in f:
+            line = raw_line.strip()
 
-    # Display the file's content line by line.
-    for line in content:
-        line = line.strip()
-        if line.startswith("#") or line == "":
-            continue
-        if f_firstLine == 1:
-            f_firstLine = 0
-            destination = line
-            print("destination :" + destination)
-        else:
-            syncedFolders.append(line)
-            print("source : " + line)
+            if not line or line.startswith("#"):
+                continue
 
-except:
-    print("Could't read file !")
-    print("exiting...")
+            if first_line:
+                destination = line
+                print("Destination:", destination)
+                first_line = False
+            else:
+                # Split by the last space if label is present
+                if ' ' in line:
+                    parts = line.rsplit(' ', 1)
+                    source_path = parts[0].strip()
+                    target_name = parts[1].strip()
+                else:
+                    source_path = line
+                    target_name = os.path.basename(source_path.strip())
+
+                synced_folders.append((source_path, target_name))
+                print(f"Source: {source_path} -> will be copied to: {target_name}")
+
+except Exception as e:
+    print(f"Couldn't read the file: {e}")
+    print("Exiting...")
     exit()
 
-for folder in syncedFolders:
-    print("Copying folder : " + folder)
-    folder_name = os.path.basename(folder.strip())  # nom du dossier source
-    dest_path = os.path.join(destination, folder_name)
-
+# Copy folders
+for source_path, target_name in synced_folders:
+    dest_path = os.path.join(destination, target_name)
     try:
-        shutil.copytree(folder.strip(), dest_path, dirs_exist_ok=True)
-        print(f"Copied {folder} -> {dest_path}")
+        shutil.copytree(source_path, dest_path, dirs_exist_ok=True)
+        print(f"Copied {source_path} -> {dest_path}")
     except Exception as e:
-        print(f"Error copying {folder}: {e}")
+        print(f"Error copying {source_path} -> {dest_path}: {e}")
 
-
-
-print("All folder copied ! ")
+print("All folders copied!")
 print("Exiting...")
